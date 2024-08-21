@@ -1,0 +1,5 @@
+curl -X POST -H "Content-Type: application/json" -d '{"name":"test2"}' http://localhost:8080/users
+curl http://localhost:8080/users/1
+curl -X PATCH -H "Content-Type: application/json" -d '{"name":"patch-test"}' http://localhost:8080/users/1
+
+curl -X POST -H "Content-Type: application/json" http://localhost:8080/lottos
