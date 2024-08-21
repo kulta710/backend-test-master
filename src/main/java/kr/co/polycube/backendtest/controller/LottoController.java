@@ -16,20 +16,6 @@ public class LottoController {
     @PostMapping("/lottos")
     public Map<String, Set<Integer>> lottos() {
 
-        Map<String, Set<Integer>> result = new HashMap<String, Set<Integer>>();
-
-        Set<Integer> numbers = new HashSet<Integer>();
-
-        while (true) {
-            int number = (int)Math.floor(Math.random()*45 + 1);
-
-            numbers.add(number);
-
-            if (numbers.size() == 6) break;
-        }
-
-        result.put("numbers", numbers);
-
-        return result;
+        return lottoService.lottos();
     }
 }
